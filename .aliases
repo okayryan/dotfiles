@@ -1,0 +1,65 @@
+# 
+alias s="suspend"
+alias 1="fg %1"
+alias 2="fg %2"
+alias yes="echo are you sure you want yes"
+
+#
+alias hosts="less /etc/hosts"
+alias ghosts="cat /etc/hosts | grep "
+alias pg="ps -ef | grep "
+alias p="ps -ef | grep -v root"
+alias gmount="mount|grep "
+alias less="less -M"
+
+#
+alias yphome="ypmatch \$* auto_home"
+alias ypextra="ypmatch \$* auto_extra.byname"
+alias yphost="ypmatch \$* hosts"
+
+#search
+alias fh="find . -name "
+
+#disk hog
+alias ducks='du -cks * |sort -rn |head -11'
+alias dumcs='du -cms * |sort -rn |head -11'
+alias duck='du -cks * |sort -rn'
+alias dumc='du -cms * |sort -rn'
+# du -ks * |sort -rn | awk '{print $1 "KB\t", $1 / 1024 "MB\t", $2 }'
+
+#typos
+alias exi='exit'
+alias xit='exit'
+
+#create files
+alias dd512='dd if=/dev/zero of=file_512mb bs=512 count=4096'
+
+#logging
+alias dlog='vi ~/work/logs/201304.txt'
+alias tailer='tail --retry -f'
+
+#clean up hosts file
+alias rmhost='ssh-keygen -R '
+
+	alias ansi="/home/kohlerr/bin/ansi.sh"
+	alias ram="cd /sys/devices/system/edac/mc&& grep [0-9]* mc*/csrow*/[cu]e_count"
+	alias la="ls -lhaSr"
+	alias cp="cp -iv"
+	alias rm="rm -iv"
+	alias mv="mv -iv"
+	alias ls="ls -F --color=auto --human-readable --almost-all"
+	alias ll="ls -l -F --color=auto --human-readable --almost-all"
+	alias df="df -h"
+	alias mes="tail /var/log/messages"
+	alias mess="tail -f /var/log/messages"
+	alias m="less /var/log/messages"
+	alias screen="TERM=xterm screen"
+	alias sssh="sssh.sh"
+	alias pio="pidstat -d -p ALL 30 5"
+	alias iolvdisplay="lvdisplay|awk  '/LV Name/{n=$3} /Block device/{d=$3; sub(".*:","dm-",d); print d,n;}'"
+	alias compinfo="dmidecode"
+
+	# LSI Megaraid commands
+	alias checkVD="sudo ./MegaCli64 -LDInfo -Lall -aALL"
+	alias checkPD="sudo ./MegaCli64 -PDList -aALL"
+	alias checkBBU="sudo ./MegaCli64 -AdpBbuCmd -aALL"
