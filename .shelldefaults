@@ -1,0 +1,55 @@
+export EDITOR=vim
+export PAGER=less
+
+# history files
+export HISTFILE="~/.bash_history_$HOSTNAME"
+export HISTSIZE=100000
+export HISTFILESIZE=100000000
+
+# Change the window title of X terminals 
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
+
+WHITE="\[\033[1;37m\]"
+GREEN="\[\033[0;32m\]"
+CYAN="\[\033[0;36m\]"
+GRAY="\[\033[0;37m\]"
+BLUE="\[\033[0;34m\]"
+GREY="\[\033[01;30m\]"
+RED="\[\033[01;31m\]"
+REGULAR="\[\033[00m\]"
+
+#prompt
+PS1="${GREY}\u@\h ${BLUE}\t ${REGULAR}\w \n\$ "
+# The default for PS2 is > which may be mistaken for a re-direct
+export PS2="\\"
+# Other options
+#PS1="${GREEN}\u@\h ${GREY}\t ${GREEN}\w \n\$ ${REGULAR}"
+#PS1="${BLUE}\u@\h ${WHITE}\t ${WHITE}\w \n\$ ${REGULAR}"
+#PS1="${RED}\u@\h ${GREY}\t ${RED}\w \n\# ${REGULAR}"
+
+#General Settings
+set noclobber
+# Let me know when a background job has finished the moment it finishes.
+set notify
+
+# limit core sizes to 1MB (2000 512-byte blocks)
+ulimit -c 2000
+
+# Make sure files are NOT world readable
+umask 077
+
+THEOS=`uname`
+THEREV=`uname -r`
+THEMACHINE=`uname -m`
+RUID=`/usr/[ub][ci][bn]/whoami`
+
+# git commiter
+export GIT_AUTHOR_EMAIL=""
+export GIT_AUTHOR_NAME="Ryan Lee Kohler"
+export GIT_COMMITTER_EMAIL=""
+export GIT_COMMITTER_NAME="Ryan Lee Kohler"
+
+set bell-style none
+#settings
+# colors for ls, etc. 
+eval `dircolors -b /etc/DIR_COLORS`
