@@ -1,0 +1,12 @@
+# Turn off splash screen
+startup_message off
+
+# Will always put the list of screen sessions at the bottom
+# Red text,  green time, and date; windows in blue:
+hardstatus alwayslastline "%{=b}%{G} S %{R}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+
+# please turn off the bell
+vbell off
+
+# Change default scrollback value for new windows
+defscrollback 500                    # default: 10
