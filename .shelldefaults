@@ -45,9 +45,9 @@ RUID=`/usr/[ub][ci][bn]/whoami`
 
 # git commiter
 export GIT_AUTHOR_EMAIL=""
-export GIT_AUTHOR_NAME="Ryan Lee Kohler"
+export GIT_AUTHOR_NAME="okaryan"
 export GIT_COMMITTER_EMAIL=""
-export GIT_COMMITTER_NAME="Ryan Lee Kohler"
+export GIT_COMMITTER_NAME="okayryan"
 
 set bell-style none
 #settings
